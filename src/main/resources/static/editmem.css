@@ -1,0 +1,182 @@
+
+.fill-form{
+    position: relative;
+    margin-top: 150px;
+}
+
+.fillform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    min-height: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.formtitle {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    color: #6e18fe;
+    margin-bottom: 10px;
+}
+
+.formtitle::before {
+    width: 18px;
+    height: 18px;
+}
+
+.formtitle::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.formtitle::before,
+.formtitle::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #6e18fe;
+}
+
+.return-back {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.return-back {
+    text-align: center;
+}
+
+.return-back a:hover {
+    text-decoration: underline #fec000;
+}
+
+.return-back a {
+    color: #f8bb01;
+}
+
+.fillflex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.fillform label {
+    position: relative;
+}
+
+.fillform label .fill-input {
+    background-color: #333;
+    color: #fec000;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.fillform label .fill-input + span {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+    font-size: 1em;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.fillform label .fill-input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.fillform label .fill-input:focus + span,
+.fillform label .fill-input:valid + span {
+    color: #cf99ff;
+    top: 0px;
+    font-weight: bold;
+}
+
+.fill-input {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+input.fill-input:read-only {
+    color: #fec000 !important;
+    font-weight: bold;
+    font-size: 22px !important;
+    -webkit-text-fill-color: #fec000 !important;
+}
+
+.fill-input {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.fillform label .fill-input + span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input.fill-input:read-only + span {
+    color: #ca95ff !important;
+    font-weight: bold;
+}
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: #6e18fe;
+}
+
+.submit:hover {
+    background-color: rgba(139, 80, 248, 0.59);
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.no-result{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(6, 0, 117, 0.61);
+    backdrop-filter: blur(20px);
+    padding: 20px 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(23, 5, 158, 0.5);
+    font-size: 18px;
+    font-weight: 500;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Issue Page</title>
+    <link rel="stylesheet" th:href="@{/homestyle.css}">
+    <link rel="stylesheet" th:href = "@{/issues.css}">
+    <link rel="icon"  th:href="@{/icon.png}">
+</head>
+<body style="background: #000722">
+<nav class="nav-bar">
+    <div class="nav-header">
+        <a href="#">
+            <img th:src="@{/icon.png}" width="30" >
+        </a>
+        <a href="/home">Home</a>
+        <a href="/trackrecords" style="
+        background-color:#4ad9c7;
+        color: black;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        height: 100%;
+        ">
+            Track Distribution
+        </a>
+    </div>
+
+    <div class="user">
+        <div>
+            <p>Hello</p>
+            <h4 th:text="${session.admin.getName()}"></h4>
+        </div>
+        <a href="/login">Log out</a>
+    </div>
+</nav>
+
+<div class="p-title">
+    <h2>TRACK DISTRIBUTION RECORDS</h2>
+    <h2>OR ISSUE BOOK</h2>
+</div>
+<div class="param" th:if="${msg != null and msg.isEmpty()}">
+    <div class="no-result"
+         style="margin-top: 50px; margin-bottom: 0"
+         th:text="'AN ERROR OCCURRED UNEXPECTEDLY ! Please Try Again'">
+    </div>
+</div>
+<div class="param" th:if="${msg != null and !msg.isEmpty()}">
+    <div class="no-result"
+         style="margin-top: 50px; margin-bottom: 0"
+         th:text="${msg}">
+    </div>
+</div>
+<div class="myform">
+    <h2>ADD ISSUE DETAILS</h2>
+    <form action="/saveIssue" method="post">
+        <label for="book_id">Book ID</label>
+        <input type="text" name="book_id" id="book_id">
+        <label for="mem_id">Member ID</label>
+        <input type="text" name="mem_id" id="mem_id">
+        <label for="days">Initial Free Days</label>
+        <input type="text" name="days" id="days">
+        <button type="submit" class="btn">
+            Submit
+        </button>
+    </form>
+</div>
+
+</body>
+</html>
