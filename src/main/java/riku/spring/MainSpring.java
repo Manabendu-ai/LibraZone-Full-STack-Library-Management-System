@@ -96,9 +96,9 @@ public class  MainSpring {
 //        List<Integer> ins =  null;
 //        System.out.println(ins);
 
-        MemberController mc = context.getBean(MemberController.class);
-        Members mem = mc.getService().getMemberById(125);
-        System.out.println(mem);
+//        MemberController mc = context.getBean(MemberController.class);
+//        Members mem = mc.getService().getMemberById(125);
+//        System.out.println(mem);
     }
 
 }
