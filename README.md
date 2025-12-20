@@ -342,6 +342,6 @@ I am grateful for the opportunity to apply comprehensive knowledge of:
 
 ### ⭐ Don't forget to star this repository if you found it helpful!
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Manabendu Karfa](https://github.com/Manabendu-ai)
 
 </div>
