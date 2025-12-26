@@ -82,4 +82,19 @@ public class AdminRepo {
         }
         return admins.get(0);
     }
+
+    public Admin getAdminByuserNameId(String username) {
+        String query = """
+                SELECT * FROM admin
+                WHERE
+                    id = ?
+                """;
+
+        RowMapper<Admin> mapper = adminMapper();
+        List<Admin> admins = jdbc.query(query, mapper, username);
+        if(admins.isEmpty()){
+            return null;
+        }
+        return admins.get(0);
+    }
 }

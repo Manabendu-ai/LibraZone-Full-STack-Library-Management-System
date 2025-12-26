@@ -68,15 +68,16 @@ public class AdminController {
 
     @RequestMapping("/auth")
     public String auth(@ModelAttribute Admin admin, Model model, HttpSession session){
-        System.out.println(admin.getId());
-        System.out.println(admin.getName());
-        admin = service.authAdmin(admin);
-        if(admin!=null){
-            session.setAttribute("admin", admin);
-            model.addAttribute("admin", admin);
-            return "home";
-        }
-        return "AdminNotFound";
+            System.out.println(admin.getId());
+            System.out.println(admin.getName());
+            admin = service.authAdmin(admin);
+            if (admin != null) {
+                session.setAttribute("admin", admin);
+                model.addAttribute("admin", admin);
+                return "home";
+            }
+            return "AdminNotFound";
+
     }
 
 }
